@@ -31,17 +31,16 @@ classifiers = [
 ]
 dependencies = [
                  "yt[full]",
+                 "numpy",
                  "click",
                ]
 
 [project.optional-dependencies]
 test = [
   "pytest >=6",
-  "pytest-cov >=3",
 ]
 dev = [
   "pytest >=6",
-  "pytest-cov >=3",
   "pre-commit",
 ]
 
@@ -50,6 +49,8 @@ Homepage = "https://github.com/chrishavlin/yt_quicklook"
 "Bug Tracker" = "https://github.com/chrishavlin/yt_quicklook/issues"
 Changelog = "https://github.com/chrishavlin/yt_quicklook/releases"
 
+[project.scripts]
+yt_quicklook = "yt_quicklook:cli"
 
 [tool.uv]
 dev-dependencies = [
